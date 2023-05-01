@@ -1871,7 +1871,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   .navbar .navbar-nav .nav-item .nav-link:not(.btn):hover,
   .navbar .navbar-nav .nav-item .nav-link:not(.btn):active {
     border-radius: 3px;
-    color: #66615B; }
+    color: #0a0a0a; }
   .navbar .logo-container {
     width: 27px;
     height: 27px;
@@ -1899,7 +1899,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   .navbar .button-dropdown .navbar-toggler-bar:nth-child(2) {
     width: 17px; }
   .navbar.navbar-transparent {
-    background-color: transparent !important;
+    background-color:  #ffffff9e!important;
     box-shadow: none;
     border-bottom: 1px solid #ddd; }
     .navbar.navbar-transparent a:not(.dropdown-item):not(.btn) {
@@ -1916,7 +1916,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
     .navbar.navbar-transparent .nav-item .nav-link:not(.btn):hover,
     .navbar.navbar-transparent .nav-item .nav-link:not(.btn):focus:hover,
     .navbar.navbar-transparent .nav-item .nav-link:not(.btn):active {
-      color: #51cbce; }
+      color: #f5593d; }
   .navbar.bg-white a:not(.dropdown-item):not(.btn) {
     color: #66615B; }
     .navbar.bg-white a:not(.dropdown-item):not(.btn).disabled {
@@ -4104,7 +4104,7 @@ License - nucleoapp.com/license/
   .footer .credits {
     padding-right: 15px; } }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1350px) {
   .navbar-collapse {
     background: none !important; }
   .navbar .navbar-toggle {

@@ -1,12 +1,14 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, AfterViewInit } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+
+declare var $: any; // Declare $ as a global variable to use jQuery
 
 @Component({
     selector: 'app-navbar',
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, AfterViewInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
 
@@ -18,6 +20,24 @@ export class NavbarComponent implements OnInit {
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
     }
+
+    ngAfterViewInit() {
+        // Access DOM elements here
+        $('#search-button').on('click', function(e) {
+            if ($('#search-input-container').hasClass('hdn')) {
+                e.preventDefault();
+                $('#search-input-container').removeClass('hdn');
+                return false;
+            }
+        });
+
+        $('#hide-search-input-container').on('click', function(e) {
+            e.preventDefault();
+            $('#search-input-container').addClass('hdn');
+            return false;
+        });
+    }
+
     sidebarOpen() {
         const toggleButton = this.toggleButton;
         const html = document.getElementsByTagName('html')[0];
@@ -71,4 +91,5 @@ export class NavbarComponent implements OnInit {
             return false;
         }
     }
+    
 }

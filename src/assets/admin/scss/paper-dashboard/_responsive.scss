@@ -9,7 +9,7 @@
 
     .navbar-brand {
       font-size: 16px;
-      margin-right: 0;
+      margin-left: 0;
     }
   }
 
@@ -135,6 +135,7 @@
         body{
             position: relative;
             overflow-x: hidden;
+            background-color: darkblue;
         }
 
         .menu-on-right{
@@ -148,6 +149,7 @@
             }
 
             .navbar-translate{
+              background-color: bisque;
                 @include transform-translate-x(-300px);
             }
 
@@ -318,7 +320,7 @@
   }
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 1350px){
     .navbar-collapse{
         background: none !important;
     }

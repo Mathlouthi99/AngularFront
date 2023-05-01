@@ -23,7 +23,7 @@
     -ms-flex-pack: center;
 
     .filter::after{
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0);
         content: "";
         display: block;
         height: 100%;
@@ -185,18 +185,19 @@
     font-size: 6vw;
     font-weight: 700;
     margin: 0;
-    color: #FFFFFF;
-    background: #fbf8ec;
-    background: -moz-linear-gradient(top, #FFFFFF 35%, #4e6773 100%);
-    background: -webkit-linear-gradient(top, #FFFFFF 35%, #4e6773 100%);
-    background: linear-gradient(to bottom, #FFFFFF 35%, #4e6773 100%);
+    color: #080808ce;
+    background: #080808ce;
+    background: -moz-linear-gradient(top, #080808ce 35%, #4e6773 100%);
+    background: -webkit-linear-gradient(top, #5c5a5ace 35%, #4e6773 100%);
+    background: linear-gradient(to bottom, #080808ce 35%, #4e6773 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
   }
 .presentation-subtitle{
     font-size: 1.7em;
-    color: #FFFFFF;
+    color: #834b02ce;
+    font-weight: bold;
 }
 
 .category-absolute{

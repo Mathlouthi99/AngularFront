@@ -76,12 +76,7 @@
         z-index: 1029;
     }
 
-    .documentation &{
-        &.fixed-top{
-            left: 0;
-            width: initial;
-        }
-    }
+
 
     .navbar-wrapper{
         display: inline-flex;
@@ -174,7 +169,7 @@
         .nav-item .nav-link:not(.btn):hover,
         .nav-item .nav-link:not(.btn):active{
             border-radius: $border-radius-small;
-            color: $default-color;
+            color: black;
         }
     }
 

@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
+import * as L from 'leaflet';
+
 
 @Component({
     selector: 'app-modal-content',

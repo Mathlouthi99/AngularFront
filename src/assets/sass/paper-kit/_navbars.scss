@@ -2,7 +2,7 @@
     .nav-item{
         .nav-link:hover,
         .nav-link:focus{
-            background-color: transparent;
+            background-color: #080808ce;
         }
     }
 }
@@ -399,7 +399,7 @@
 
     .navbar[class*="bg-"] & .navbar-toggler-bar,
     .navbar.navbar-transparent & .navbar-toggler-bar{
-        background: #fff;
+        background: #adabab;
     }
 
     .navbar-toggler-bar{

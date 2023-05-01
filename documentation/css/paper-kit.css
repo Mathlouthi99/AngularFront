@@ -2168,11 +2168,11 @@ textarea.form-control {
   background-color: transparent;
   opacity: 1;
   filter: alpha(opacity=100);
-  color: #FFFFFF;
+  color: #0c0c0c;
 }
 .navbar-transparent .navbar-nav .nav-item .nav-link:not(.btn), [class*="bg"] .navbar-nav .nav-item .nav-link:not(.btn) {
-  color: #FFFFFF;
-  border-color: #FFFFFF;
+  color: #0c0c0c;
+  border-color: #070707;
 }
 .navbar-transparent .navbar-nav .active .nav-link
 .active .nav-link:hover,
@@ -2183,8 +2183,8 @@ textarea.form-control {
 [class*="bg"] .navbar-nav .active .nav-link:focus,
 [class*="bg"] .navbar-nav .nav-item .nav-link:hover,
 [class*="bg"] .navbar-nav .nav-item .nav-link:focus {
-  background-color: transparent;
-  color: #FFFFFF;
+  background-color: black;
+  color: #131212;
   opacity: 1;
   filter: alpha(opacity=100);
 }
@@ -5269,7 +5269,7 @@ textarea.form-control {
     width: 38em;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1350px) {
   .bootstrap-datetimepicker-widget.dropdown-menu.timepicker-sbs {
     width: 38em;
   }

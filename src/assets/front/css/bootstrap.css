@@ -594,7 +594,7 @@ progress {
     }
 }
 
-@media(min-width: 992px) {
+@media(min-width: 1350px) {
     .container-lg,.container-md,.container-sm,.container {
         max-width:960px
     }
@@ -1291,7 +1291,7 @@ progress {
     }
 }
 
-@media(min-width: 992px) {
+@media(min-width: 1350px) {
     .col-lg {
         flex:1 0 0%
     }
@@ -4172,7 +4172,7 @@ textarea.form-control-lg {
     }
 }
 
-@media(min-width: 992px) {
+@media(min-width: 1350px) {
     .dropdown-menu-lg-start {
         --bs-position: start
     }
@@ -4606,7 +4606,7 @@ textarea.form-control-lg {
     flex-wrap: inherit;
     align-items: center;
     justify-content: space-between;
-    background-color: #354c64;
+    background-color: #ffffff9e;
 }
 
 .navbar-brand {
@@ -4713,7 +4713,7 @@ textarea.form-control-lg {
     }
 }
 
-@media(min-width: 768px) {
+@media(min-width: 400px) {
     .navbar-expand-md {
         flex-wrap:nowrap;
         justify-content: flex-start
@@ -4741,7 +4741,7 @@ textarea.form-control-lg {
     }
 }
 
-@media(min-width: 992px) {
+@media(min-width: 1300px) {
     .navbar-expand-lg {
         flex-wrap:nowrap;
         justify-content: flex-start
@@ -4767,8 +4767,14 @@ textarea.form-control-lg {
     .navbar-expand-lg .navbar-toggler {
         display: none
     }
+    
 }
-
+@media (max-width: 991.98px) {
+    .navbar-expand-xl .navbar-toggler {
+      display: block;
+    }
+  }
+  
 @media(min-width: 1200px) {
     .navbar-expand-xl {
         flex-wrap:nowrap;
@@ -5752,7 +5758,7 @@ textarea.form-control-lg {
     }
 }
 
-@media(min-width: 992px) {
+@media(min-width: 1350px) {
     .list-group-horizontal-lg {
         flex-direction:row
     }
@@ -6336,7 +6342,7 @@ textarea.form-control-lg {
     }
 }
 
-@media(min-width: 992px) {
+@media(min-width: 1350px) {
     .modal-lg,.modal-xl {
         max-width:800px
     }
@@ -7417,7 +7423,7 @@ textarea.form-control-lg {
     }
 }
 
-@media(min-width: 992px) {
+@media(min-width: 1350px) {
     .sticky-lg-top {
         position:-webkit-sticky;
         position: sticky;
@@ -10559,7 +10565,7 @@ textarea.form-control-lg {
     }
 }
 
-@media(min-width: 992px) {
+@media(min-width: 1350px) {
     .float-lg-start {
         float:left !important
     }
@@ -10609,6 +10615,7 @@ textarea.form-control-lg {
     }
 
     .d-lg-none {
+        color: #000;
         display: none !important
     }
 

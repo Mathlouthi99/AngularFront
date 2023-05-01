@@ -18,15 +18,26 @@
             "polyfills": "src/polyfills.ts",
             "assets": [
               "src/assets",
-              "src/favicon.ico"
+              "src/favicon.ico",
+              {
+                "glob": "**/*.css",
+                "input": "src/assets/admin/css/",
+                "output": "/assets/admin/css/",
+              }
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/assets/sass/paper-kit.scss",
+              "node_modules/leaflet/dist/leaflet.css",
+              "src/assets/admin/css/bootstrap.min.css",
+              "src/assets/admin/css/paper-dashboard.css",
+              "src/assets/admin/demo/demo.css",
               "src/assets/css/demo.css",
-              "src/assets/css/nucleo-icons.css"
+              "src/assets/css/nucleo-icons.css",
+              "src/assets/sass/paper-kit.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/leaflet/dist/leaflet.js",
+            ]
           },
           "configurations": {
             "production": {
@@ -78,8 +89,11 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/sass/paper-kit.scss",
+              "src/assets/admin/css/bootstrap.min.css",
+              "src/assets/admin/css/paper-dashboard.css",
+              "/src/assets/admin/demo/demo.css",
               "src/assets/css/demo.css",
-              "src/assets/css/nucleo-icons.css"
+              "src/assets/css/nucleo-icons.css",
             ],
             "assets": [
               "src/assets",

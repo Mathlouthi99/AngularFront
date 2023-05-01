@@ -33,7 +33,7 @@
     .navbar-toggle .icon-bar {
           display: block;
           position: relative;
-          background: #fff;
+          background: #080808;
           width: 24px;
           height: 2px;
           border-radius: 1px;
@@ -437,7 +437,7 @@
     }
 
     .fixed-top .navbar-collapse{
-        background-color: #FF8F5E;
+        background-color: #ffffff9e;
         // width: 100%;
         float: left;
     }
@@ -491,6 +491,7 @@
         position: relative;
         @include transform-translate-x(0);
         @include transition (0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
+        background-color: #ffffff9e;
     }
     .wrapper{
     //    @include transform-translate-x(0px);
@@ -544,7 +545,7 @@
             right: 0px;
             z-index: 1032;
             visibility: visible;
-            background-color: #999;
+            background-color: #ffffff9e;
             overflow-y: visible;
             border-top: none;
             text-align: left;
