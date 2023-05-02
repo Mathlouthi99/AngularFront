@@ -6,7 +6,7 @@ declare var $: any; // Declare $ as a global variable to use jQuery
 @Component({
     selector: 'app-navbar',
     templateUrl: './navbar.component.html',
-    styleUrls: ['./navbar.component.scss']
+    styleUrls: ['./navbar.component.scss','styles.min.css']
 })
 export class NavbarComponent implements OnInit, AfterViewInit {
     private toggleButton: any;
@@ -60,7 +60,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     };
     sidebarToggle() {
         // const toggleButton = this.toggleButton;
-        // const body = document.getElementsByTagName('body')[0];
+        const body = document.getElementsByTagName('body')[0];
         if (this.sidebarVisible === false) {
             this.sidebarOpen();
         } else {
