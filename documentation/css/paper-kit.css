@@ -196,6 +196,8 @@ body {
   color: #66615b;
   font-size: 14px;
   font-weight: 300;
+  padding-bottom: 2px;
+  max-height: 140px;
   font-family: 'Montserrat', "Helvetica", Arial, sans-serif;
 }
 

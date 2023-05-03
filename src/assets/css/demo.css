@@ -1064,7 +1064,7 @@ pre.prettyprint {
 }
 
 .navbar-header {
-    min-width: 135px;
+    width: 175px;
 }
 
 #demo-navbar {

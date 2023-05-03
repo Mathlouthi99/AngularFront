@@ -21,6 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddProductComponent } from './admin/add-product/add-product.component';
 import { AddCategoryComponent } from './admin/add-category/add-category.component';
 import { CategoryProductService } from 'app/services/category-product.service';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { UpdateProductComponent } from './admin/updateproduct/update-product.component';
 
 
 @NgModule({
@@ -51,7 +53,9 @@ import { CategoryProductService } from 'app/services/category-product.service';
         OrdersComponent,
         UpdateOrderComponent,
         AddProductComponent,
-        AddCategoryComponent
+        AddCategoryComponent,
+        CheckoutComponent,
+        UpdateProductComponent
 
         
     ]
