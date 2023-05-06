@@ -37,7 +37,7 @@ export class ProductService {
     return this.httpClient.get<Product>(`${this.baseUrl}/find/` + id);
   }
 
-  addTask(formData: FormData): Observable<any> {
+  addProduct(formData: FormData): Observable<any> {
     return this.httpClient.post(this.baseUrl + '/addproduct', formData);
   }
 
