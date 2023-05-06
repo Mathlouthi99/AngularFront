@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
 
     removeNavbarAndFooter(): boolean {
         const titlee = this.location.prepareExternalUrl(this.location.path());
-        if (titlee.includes('/signup'),('/orders')) {
+        if (titlee.includes('/signup')) {
             return false;
         } else {
             return true;
