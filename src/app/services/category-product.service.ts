@@ -13,7 +13,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CategoryProductService {
-  private baseUrl = "http://localhost:9090/category/"
+  private baseUrl = "http://localhost:9091/category/"
 
   constructor(private httpClient:HttpClient) { }
 

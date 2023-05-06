@@ -37,6 +37,8 @@
             ],
             "scripts": [
               "node_modules/leaflet/dist/leaflet.js",
+              "src/app/examples/landing/landing.component.js",
+              "src/assets/customm.js"
             ]
           },
           "configurations": {

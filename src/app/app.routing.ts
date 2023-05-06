@@ -48,14 +48,6 @@ const routes: Routes =[
     {path: '/updateCategory', component: UpdateProductComponent},
     {path: 'updateProduct/:id', component: UpdateProductComponent },
     {path: 'checkout', component: CheckoutComponent},
-
-
-
-
-
-
-
-
 ];
 
 @NgModule({

@@ -20,7 +20,7 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class ProductService {
-  baseUrl = 'http://localhost:9090/product';
+  baseUrl = 'http://localhost:9091/product';
   product: Product = new Product();
 
   public dataForm!: FormGroup;
@@ -38,7 +38,7 @@ export class ProductService {
   }
 
   addProduct(formData: FormData): Observable<any> {
-    return this.httpClient.post(this.baseUrl + '/addproduct', formData);
+    return this.httpClient.post(this.baseUrl + '/add', formData);
   }
 
   updateTask(formData: FormData): Observable<any> {

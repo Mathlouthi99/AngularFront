@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CheckoutComponent, NgbdModalContent } from './checkout/checkout.component';
+
 
 import { LandingComponent } from './landing/landing.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -21,8 +23,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddProductComponent } from './admin/add-product/add-product.component';
 import { AddCategoryComponent } from './admin/add-category/add-category.component';
 import { CategoryProductService } from 'app/services/category-product.service';
-import { CheckoutComponent } from './checkout/checkout.component';
 import { UpdateProductComponent } from './admin/updateproduct/update-product.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -31,12 +34,10 @@ import { UpdateProductComponent } from './admin/updateproduct/update-product.com
         FormsModule,
         NgbModule,
         ReactiveFormsModule,
-    
+        BrowserModule
         
-        
-
     ],
-    providers: [ProductService,CategoryProductService],
+    providers: [ProductService, CategoryProductService],
     declarations: [
         LandingComponent,
         SignupComponent,
@@ -55,9 +56,14 @@ import { UpdateProductComponent } from './admin/updateproduct/update-product.com
         AddProductComponent,
         AddCategoryComponent,
         CheckoutComponent,
-        UpdateProductComponent
-
+        UpdateProductComponent,
+        CalendarComponent,
+        NgbdModalContent // add the CalendarComponent here
+    ],
+    exports: [
         
-    ]
+        NgbdModalContent,
+        CheckoutComponent
+      ]
 })
 export class ExamplesModule { }

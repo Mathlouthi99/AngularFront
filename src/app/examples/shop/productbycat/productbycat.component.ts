@@ -26,18 +26,11 @@ export class ProductbycatComponent {
     });
   //  this.getProductImages();
   }
-  getProductByCategory() {
-    this.id = this.route.snapshot.params['id'];
-    this.productService.getProductByCategory(this.id).subscribe((data) => {
-      console.log(data);
-      this.products = data;
-    });
+  getProductByCategory():void  {
+
   }
   getProductImages() {
-    this.id = this.route.snapshot.params['id'];
-    this.productService.getImagesByProducts(this.id).subscribe((data) => {
-      this.files = data;
-    });
+
   }
   getProductList() {
     

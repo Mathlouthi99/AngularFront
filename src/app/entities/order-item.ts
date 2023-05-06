@@ -1,19 +1,13 @@
 
-import { CartItem } from "./cart-item";
+import { Product } from "./product";
+import { Order } from "./order";
+
 
 
 export class OrderItem {
-    imageUrl: string;
-    nprix: number;
-    gprix: number;
+    id: number;
+    product: Product;
     quantity: number;
-    productId: number;
-
-    constructor(cartItem: CartItem) {
-        this.imageUrl = cartItem.image;
-        this.quantity = cartItem.quantity;
-        this.nprix = cartItem.nprix;
-        this.gprix = cartItem.gprix;
-        this.productId = cartItem.id;
+    order: Order;
     }
-}
+

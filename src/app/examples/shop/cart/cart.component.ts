@@ -66,9 +66,6 @@ export class CartComponent implements OnInit {
     this.cartItems = JSON.parse(localStorage.getItem('cartItems') || '{}');
   }
   getProductImages() {
-    this.id = this.route.snapshot.params['id'];
-    this.productService.getImagesByProducts(this.id).subscribe((data) => {
-      this.files = data;
-    });
+
   }
 }

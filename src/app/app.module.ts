@@ -14,6 +14,7 @@ import { ExamplesModule } from './examples/examples.module';
 import { ProductService } from './services/product.service';
 import { CategoryProductService } from './services/category-product.service';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbdModalContent } from './examples/landing/landing.component';
 
 
 
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,9 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
   ],
   providers: [ProductService,CategoryProductService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    NgbdModalContent
+  ]
 })
 export class AppModule { }

@@ -1,59 +1,79 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
-import * as L from 'leaflet';
+import { NgbModal, NgbActiveModal, NgbDateStruct, NgbDatepicker } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 
 @Component({
     selector: 'app-modal-content',
     template: `
-    <div class="modal-header">
-        <h5 class="modal-title text-center">Modal title</h5>
-        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    <div class="modal-body">     <div class="container-fluid m-0 p-0">
-
-<!--Google map-->
-<div id="map-container" class="z-depth-1-half map-container" style="height: 100vh; width: 100%;">
- <iframe src="http://maps.google.com/maps?q=manhattan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-   style="border:0; height: 100%; width: 100%;" allowfullscreen></iframe>
-</div>
-
-       </div>
-    </div>
-    <div class="modal-footer">
-        <div class="left-side">
-            <button type="button" class="btn btn-default btn-link" (click)="activeModal.close('Close click')">Never mind</button>
-        </div>
-        <div class="divider"></div>
-        <div class="right-side">
-            <button type="button" class="btn btn-danger btn-link" (click)="activeModal.close('Close click')">DELETE</button>
-        </div>
-    </div>
+    
     `
 })
-export class NgbdModalContent {
-    @Input() name;
+export class NgbdModalContent implements OnInit {
+    @Input() name: string; // add type to @Input property
+    selectedDate: NgbDateStruct;
+    installationDate: Date; // add installationDate property
+    
+    constructor(public activeModal: NgbActiveModal, private modalService: NgbModal) {}
 
-    constructor(public activeModal: NgbActiveModal) {}
-}
+    ngOnInit() {
+        this.selectedDate = null; // set initial value for selectedDate
+    }
+
+    openDatePicker() {
+        const modalRef = this.modalService.open(NgbDatepicker, { size: 'sm' });
+        modalRef.result.then((result) => {
+          if (result) {
+            this.selectedDate = result;
+            const formattedDate = this.selectedDate.day + '-' + this.selectedDate.month + '-' + this.selectedDate.year;
+            const inputField = document.getElementById('selectedDateInput') as HTMLInputElement;
+            inputField.value = formattedDate;
+          }
+        });
+      }
+      
+
+      confirm() {
+        const installationDate = new Date(
+          this.selectedDate.year,
+          this.selectedDate.month - 1,
+          this.selectedDate.day
+        );
+        this.activeModal.close({ selectedDate: this.selectedDate, installationDate });
+      }
+    }
+    
+
+
 @Component({
     selector: 'app-landing',
     templateUrl: './landing.component.html',
-    styleUrls: ['./landing.component.scss']
+    styleUrls: ['./landing.component.scss'],
 })
-
 export class LandingComponent implements OnInit {
-  focus: any;
-  focus1: any;
+    focus: any;
+    focus1: any;
+    selectedDate: NgbDateStruct;
 
-  constructor(private modalService: NgbModal) {}
-  open() {
-      const modalRef = this.modalService.open(NgbdModalContent);
-      modalRef.componentInstance.name = 'World';
-  }
+    constructor(private modalService: NgbModal) {}
 
-  ngOnInit() {}
+    open() {
+        const modalRef = this.modalService.open(NgbdModalContent);
+        modalRef.componentInstance.name = 'World';
+        modalRef.result.then((result) => {
+            if (result && result.selectedDate) {
+                this.selectedDate = result.selectedDate;
+            }
+        }).catch((error) => {
+            if (error.message === 'Something went wrong') {
+                console.log('There was an error: Something went wrong');
+                // Handle the error here
+            } else {
+                throw error;
+            }
+        });
+    }
+    
 
+    ngOnInit() {}
 }
